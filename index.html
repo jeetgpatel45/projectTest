@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <nav class="navBar">
+                <form class="form">
+                    <div class="search">
+                        <a id="linkSearch" href="./index.html">PIED PIPER</a>
+                        <input id="inputSearch" type="search" placeholder="Search by Title or Author">
+
+                        <button class="button" id="searchBtn" type="submit"> Search </button>
+                    </div>
+                    <div class="user">
+                        <div class="user2">
+                            <a id="linkUser" href="cart.html">Cart</a>
+                            <button class="button" id="loginBtn" type="submit"> Login </button>
+                        </div>
+                    </div>
+                </form>
+            </nav>
+        </header>
+
+        <main>
+            <div class="slide-container">
+                <div class="slideshow">
+                    <img id="background" src="./images/background.jpg" alt="guitar">
+                    <div class="images fade">
+                        <img class="slideImage" src="./images/eminem.jpg" alt="eminem">
+                        <div class="description">
+                            <div> ARTIST: Eminem </div>
+                            <div> SONG: Lose Yourself </div>
+                            <div> DESCRIPTION: American Rap song by Eminem from the movie "8 Mile". It is based on
+                                the struggles and life of Eminem, fighting underground rap battles and making it out
+                                of it.</div>
+                        </div>
+                    </div>
+                    <div class="images fade">
+                        <img class="slideImage" src="./images/marron.jpg" alt="eminem">
+                        <div class="description">
+                            <div> ARTIST: Marron 5 </div>
+                            <div> SONG: Girl Like You </div>
+                            <div> DESCRIPTION: Another song Perfromed by American pop rock band Marron 5. This song
+                                is about thanking the woman in his life and putting up with him through every
+                                challenges.</div>
+                        </div>
+                    </div>
+                    <div class="images fade">
+                        <img class="slideImage" src="./images/imagine.jpg" alt="eminem">
+                        <div class="description">
+                            <div> ARTIST: Imagine Dragons </div>
+                            <div> SONG: Natural </div>
+                            <div> DESCRIPTION: This song is performed by American pop rock band Imagine Dragons. The
+                                song is about being cold-hearted in this cold-world and how to fight through it.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table">
+                <table id="music-table">
+                    <thead>
+                        <tr class="trHead">
+                            <th class="th" id="th1" scope="col">Images</th>
+                            <th class="th" scope="col">Song Title</th>
+                            <th class="th" scope="col">Artist</th>
+                            <th class="th" scope="col">Album</th>
+                            <th class="th" scope="col">Link</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="music-table-body">
+                        <tr class="trBody"> <!-- PUT THE CLASSNAME IN JS FILE WITH THE TAG 'TR' -->
+                            <td>Something</td>
+                            <td>testing</td>
+                            <td>styling</td>
+                            <td>testing</td>
+                            <td>styling</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+
+        </main>
+
+        <footer>
+
+
+        </footer>
+
+    </div>
+
+
+    <script>
+        var slideIndex = 0;
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("images");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "flex";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+
+        showSlides();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/JS/index.js"></script>
+</body>
+
+</html>
