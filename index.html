@@ -26,7 +26,33 @@
                     <div class="user">
                         <div class="user2">
                             <a id="linkUser" href="cart.html">Cart</a>
-                            <button class="button" id="loginBtn" type="submit"> Login </button>
+                            <button onclick="document.getElementById('id01')" class="button" id="loginBtn" type="submit"> Login </button>
+
+                            <div id="id01" class="modal">
+                                <form class="modal-content animate">
+
+                                    <div class="Modalcontainer">
+                                        <label for="uname"><b>Username</b></label>
+                                        <input type="text" placeholder="Enter Username">
+
+                                        <label for="psw"><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password">
+
+                                        <button type="submit">Login</button>
+                                        <label>
+                                            <input type="checkbox" checked="checked"> Remember me
+                                        </label>
+                                    </div>
+
+                                    <div class="Modalcontainer" style="background-color:#f1f1f1">
+                                        <button type="button"
+                                            onclick="document.getElementById('id01').style.display='none'"
+                                            class="cancelbtn">Cancel</button>
+                                    </div>
+
+                                </form>
+                            </div>
+
                         </div>
                     </div>
                 </form>
@@ -74,24 +100,17 @@
                 <table id="music-table">
                     <thead>
                         <tr class="trHead">
-                            <th class="th" id="th1" scope="col">Images</th>
-                            <th class="th" scope="col">Song Title</th>
+                            <!-- <th class="th" id="th1" scope="col">Images</th> -->
+                            <th class="th"  id="th1" scope="col">Song Title</th>
                             <th class="th" scope="col">Artist</th>
                             <th class="th" scope="col">Album</th>
-                            <th class="th" scope="col">Link</th>
+                            <th class="th" scope="col">Last Fm</th>
+                            <th class="th" scope="col">Youtube</th>
                         </tr>
                     </thead>
 
-                    <tbody id="music-table-body">
-                        <tr class="trBody"> <!-- PUT THE CLASSNAME IN JS FILE WITH THE TAG 'TR' -->
-                            <td>Something</td>
-                            <td>testing</td>
-                            <td>styling</td>
-                            <td>testing</td>
-                            <td>styling</td>
-                        </tr>
-                    </tbody>
-                    
+                    <tbody id="music-table-body"></tbody>
+
                 </table>
             </div>
 
@@ -104,24 +123,6 @@
 
     </div>
 
-
-    <script>
-        var slideIndex = 0;
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("images");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            slides[slideIndex - 1].style.display = "flex";
-            setTimeout(showSlides, 5000); // Change image every 5 seconds
-        }
-
-        showSlides();
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/JS/index.js"></script>
 </body>
